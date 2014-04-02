@@ -1,0 +1,316 @@
+/**
+
+
+             .               oooo            
+           .o8               `888            
+ .oooo.o .o888oo oooo    ooo  888   .ooooo.  
+d88(  "8   888    `88.  .8'   888  d88' `88b 
+`"Y88b.    888     `88..8'    888  888ooo888 
+o.  )88b   888 .    `888'     888  888    .o 
+8""888P'   "888"     .8'     o888o `Y8bod8P' 
+                 .o..P'                      
+                 `Y8P'                       
+                                             
+oooo                            .o8                     
+`888                           "888                     
+ 888   .ooooo.   .oooo.    .oooo888   .ooooo.  oooo d8b 
+ 888  d88' `88b `P  )88b  d88' `888  d88' `88b `888""8P 
+ 888  888   888  .oP"888  888   888  888ooo888  888     
+ 888  888   888 d8(  888  888   888  888    .o  888     
+o888o `Y8bod8P' `Y888""8o `Y8bod88P" `Y8bod8P' d888b    
+
+
+**/
+/* line 17, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+    these are just the default styles used in the Cycle2 demo pages.  
+    you can use these styles or any others that you wish.
+*/
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+/* line 8, ../sass/_plugins.scss */
+.cycle-slideshow, .cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/_plugins.scss */
+.cycle-slideshow {
+  width: 45%;
+  min-width: 200px;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 0;
+  position: relative;
+  background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+}
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+/* line 17, ../sass/_plugins.scss */
+.cycle-slideshow img {
+  /* 
+  some of these styles will be set by the plugin (by default) but setting them here
+  helps avoid flash-of-unstyled-content
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  display: block;
+}
+
+/* in case script does not load */
+/* line 27, ../sass/_plugins.scss */
+.cycle-slideshow img:first-child {
+  position: static;
+  z-index: 100;
+}
+
+/* pager */
+/* line 32, ../sass/_plugins.scss */
+.cycle-pager {
+  text-align: center;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  top: 10px;
+  overflow: hidden;
+}
+
+/* line 35, ../sass/_plugins.scss */
+.cycle-pager span {
+  font-family: arial;
+  font-size: 50px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* line 39, ../sass/_plugins.scss */
+.cycle-pager span.cycle-pager-active {
+  color: #D69746;
+}
+
+/* line 40, ../sass/_plugins.scss */
+.cycle-pager > * {
+  cursor: pointer;
+}
+
+/* caption */
+/* line 44, ../sass/_plugins.scss */
+.cycle-caption {
+  position: absolute;
+  color: white;
+  bottom: 15px;
+  right: 15px;
+  z-index: 700;
+}
+
+/* overlay */
+/* line 48, ../sass/_plugins.scss */
+.cycle-overlay {
+  font-family: tahoma, arial;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 600;
+  background: black;
+  color: white;
+  padding: 15px;
+  opacity: .5;
+}
+
+/* prev / next links */
+/* line 56, ../sass/_plugins.scss */
+.cycle-prev, .cycle-next {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 800;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* line 57, ../sass/_plugins.scss */
+.cycle-prev {
+  left: 0;
+  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;
+}
+
+/* line 58, ../sass/_plugins.scss */
+.cycle-next {
+  right: 0;
+  background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;
+}
+
+/* line 59, ../sass/_plugins.scss */
+.cycle-prev:hover, .cycle-next:hover {
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+
+/* line 61, ../sass/_plugins.scss */
+.disabled {
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+/* display paused text on top of paused slideshow */
+/* line 65, ../sass/_plugins.scss */
+.cycle-paused:after {
+  content: 'Paused';
+  color: white;
+  background: black;
+  padding: 10px;
+  z-index: 500;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  /* line 78, ../sass/_plugins.scss */
+  .cycle-slideshow {
+    width: 200px;
+  }
+
+  /* line 79, ../sass/_plugins.scss */
+  .cycle-overlay {
+    padding: 4px;
+  }
+
+  /* line 80, ../sass/_plugins.scss */
+  .cycle-caption {
+    bottom: 4px;
+    right: 4px;
+  }
+}
+/**
+
+
+                                
+                                
+ .oooo.   oo.ooooo.  oo.ooooo.  
+`P  )88b   888' `88b  888' `88b 
+ .oP"888   888   888  888   888 
+d8(  888   888   888  888   888 
+`Y888""8o  888bod8P'  888bod8P' 
+           888        888       
+          o888o      o888o      
+                                
+             .               oooo                     
+           .o8               `888                     
+ .oooo.o .o888oo oooo    ooo  888   .ooooo.   .oooo.o 
+d88(  "8   888    `88.  .8'   888  d88' `88b d88(  "8 
+`"Y88b.    888     `88..8'    888  888ooo888 `"Y88b.  
+o.  )88b   888 .    `888'     888  888    .o o.  )88b 
+8""888P'   "888"     .8'     o888o `Y8bod8P' 8""888P' 
+                 .o..P'                               
+                 `Y8P'  
+                 
+
+**/
+/* line 28, ../sass/_app.scss */
+body {
+  background: white;
+}
+
+/* line 35, ../sass/_app.scss */
+#LeftOnlyNav {
+  display: none;
+}
+
+/* line 39, ../sass/_app.scss */
+.cycle-slideshow {
+  width: 300px;
+  height: 225px;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 40, ../sass/_app.scss */
+.cycle-slideshow div.slide {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 41, ../sass/_app.scss */
+.cycle-pager {
+  position: static;
+}

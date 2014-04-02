@@ -1,0 +1,41 @@
+/**
+
+
+                                
+                                
+ .oooo.   oo.ooooo.  oo.ooooo.  
+`P  )88b   888' `88b  888' `88b 
+ .oP"888   888   888  888   888 
+d8(  888   888   888  888   888 
+`Y888""8o  888bod8P'  888bod8P' 
+           888        888       
+          o888o      o888o      
+                                
+             .               oooo                     
+           .o8               `888                     
+ .oooo.o .o888oo oooo    ooo  888   .ooooo.   .oooo.o 
+d88(  "8   888    `88.  .8'   888  d88' `88b d88(  "8 
+`"Y88b.    888     `88..8'    888  888ooo888 `"Y88b.  
+o.  )88b   888 .    `888'     888  888    .o o.  )88b 
+8""888P'   "888"     .8'     o888o `Y8bod8P' 8""888P' 
+                 .o..P'                               
+                 `Y8P'  
+                 
+
+**/
+// These styles belong to the app
+
+body{
+	background: white;
+}
+
+
+// No displays
+
+#LeftOnlyNav{
+	display: none;
+}
+
+.cycle-slideshow { width: 300px; height: 225px; margin: auto; text-align: center }
+.cycle-slideshow div.slide { width: 100%; height: 100% }
+.cycle-pager { position: static }
