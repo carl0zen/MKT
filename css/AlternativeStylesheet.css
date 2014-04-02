@@ -1,0 +1,13 @@
+﻿/* ===================================================================== */
+/* ========== Customizations to Accenture Publishing 2.0 CSS =========== */
+/* ===================================================================== */
+ 
+/* BANNER - URL (relative to CSS or absolute) for customized banner (1004x73 pixels) */
+
+.p2-banner {
+      background-image: url('Images/CustomBanner.png');
+}
+
+
+/* Temp fix for content alignment */
+.p2-swpContent { vertical-align: top; }
