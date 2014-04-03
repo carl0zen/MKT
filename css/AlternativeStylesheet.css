@@ -2,6 +2,8 @@
 /* ========== Customizations to Accenture Publishing 2.0 CSS =========== */
 /* ===================================================================== */
  
+ 
+@import url("https://raw.githubusercontent.com/carlosepp/MKT/master/css/home.css");
 /* BANNER - URL (relative to CSS or absolute) for customized banner (1004x73 pixels) */
 
 .p2-banner {
@@ -11,3 +13,4 @@
 
 /* Temp fix for content alignment */
 .p2-swpContent { vertical-align: top; }
+  /*Cesarinsss shit btn*/
