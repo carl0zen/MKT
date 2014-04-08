@@ -344,7 +344,7 @@ body div#LayoutArea, body div.content{margin:0;width: auto;}
 .p2-LayoutArea {margin: 0;width: auto;}
 .p2-swpMain{width:100%;}
 .p2-SLMainContent, .p2-ContentArea{width: auto}
-.p2-ContentAreaMinHeight{height: auto;  }
+
 
 
 /*TopBar*/
@@ -402,14 +402,11 @@ a.p2-accentureLogoImage{background: url("../img/mkt_logo.png") no-repeat scroll 
 .sliderContainer .controls a + a{right: 10px; left: auto; background-position: -81px -299px}
 
 /*footer*/
-.p2-footerArea{border-top: 1px solid #CCCCCC;color: #333333; font-size: 10px; margin: 40px auto 0; padding-left: 0; padding-right: 0; padding-top: 20px; width: 1170px;}
-.p2-footerArea a[href]:link, .p2-footerArea a[href]:visited, .p2-footerArea a[href]:hover{color:#DD4411;}
-.p2-LastUpdatedDate{clear: both; color: #737373; font: 11px Arial; height: 1px; margin: 0 auto; padding: 0; position: relative; text-align: right; top: 1px; width: 1170px; display: none}
+.p2-footerArea{margin: 0 auto; padding-left: 0; padding-right: 0; width: 1170px;}
 
 /*Top Navigation*/
 .p2-SLMainContent{overflow: visible;}
 .topNavigation {height: 1px; margin: 0 auto; overflow: visible; padding: 0; position: relative; width: 1170px; z-index: 1000;}
-
 .topNavigation ul {position: absolute; right: 0; top: -83px; z-index: 1000;}
 .topNavigation ul li {display: inline-block;margin-left: 30px;}
 .topNavigation ul li:first-child{margin-left:0px;}
@@ -420,64 +417,13 @@ a.p2-accentureLogoImage{background: url("../img/mkt_logo.png") no-repeat scroll 
 
 /*Home Filters*/
 .content #newsList{width: 1170px;}
-.content .news-header{overflow: hidden; margin: 20px 0}
+.content .news-header{overflow: hidden;}
 .content .news-header, .content .news-header *{
   -webkit-box-sizing:border-box;
      -moz-box-sizing:border-box;
           box-sizing:border-box;    
 }
-.content .news-header h2{color: #333333; float: left; font-family: "RotisSansSerif55",arial; font-size: 40px; font-weight: lighter; width: 50%; line-height: 1.3}
+.content .news-header h2{color: #333333; float: left; font-family: "RotisSansSerif55",arial; font-size: 40px; font-weight: lighter; width: 50%;}
 .content .news-header > div{float: right; width:auto;float: right;}
 .content .news-header > a.access-me {background: url("../img/mkt-sprite.png") repeat scroll -215px -92px rgba(0, 0, 0, 0);color: #FFFFFF; display: block; float: right; height: 53px; overflow: hidden; text-indent: -1000px; width: 202px;}
-.content .news-header > a.access-me:hover{background-position: -423px -92px }
-
-#categoryFilter {clear:both;display:block;width:100%;height:auto;margin:20px 0 0; border-bottom: 0 none;  border: 2px solid #ddd; border-bottom: 0 none;  min-height: 91px; overflow: hidden; }
-#categoryFilter:before{clear: both;}
-
-#categoryFilter > a{border-left: 2px solid #ddd; border-bottom:2px solid #ddd; color: #666666; display: block; float: left; font-family: "RotisSansSerif55",arial; font-size: 25px; line-height: 1.5; padding: 30px 30px 20px; width: 25%; background: url("../img/mkt-bg-tabs.png") repeat scroll 0 0 rgba(0, 0, 0, 0)}
-#categoryFilter > a:hover{background: none #ddd}
-#categoryFilter > a.active-tab{border-bottom-color:#ffffff;  background: none repeat scroll 0 0 #FFFFFF; }
-#categoryFilter > a:first-child{border-left:0 none }
-#categoryFilter > a i {background: url("../img/mkt-sprite.png") repeat scroll -173px -30px rgba(0, 0, 0, 0); display: inline-block; float: left; height: 36px; margin: 0 13px 0 0; width: 54px;}
-
-#categoryFilter > a[data-filter='business'] i{background-position: 0   -30px;}
-#categoryFilter > a[data-filter='growth'] i{ background-position: -90px -30px;}
-#categoryFilter > a[data-filter='people'] i{ background-position:-173px -30px;}
-#categoryFilter > a[data-filter='all']{overflow: hidden;text-indent: -1000px; display:block;}
-#categoryFilter > a[data-filter="all"] i{background-position: -257px -25px; display: block; width: 100%;}
-
-#viewFilter {margin-right: 40px; margin-top: 16px;}
-#viewFilter > a {color: #92929F; display: block; float: left; line-height: 1.2; font-size: 15px;margin-left: 40px;}
-#viewFilter > a i {background: url("../img/mkt-sprite.png") repeat scroll -15px -95px rgba(0, 0, 0, 0); display: inline-block; float: left; height: 24px; margin: 0 7px 0 0; width: 24px;}
-#viewFilter > a.listView i{background-position: -15px -95px}
-#viewFilter > a.gridView i{ background-position: -61px -96px}
-#viewFilter > a.gridView.selected i{background-position: -61px -129px;}
-#viewFilter > a.listView.selected i{background-position: -15px -128px;}
-
-#newsList .newsItem .tags a{line-height: 17px; font-family: arial;}
-#newsList .newsItem .tags a.link-Performance{background-color:#66AA44}
-#newsList .newsItem .tags a.link-Client{background-color: #DD4411}
-#newsList .newsItem .tags a.link-Future{ background-color: #003344}
-#newsList .newsItem .tags a.link-People{background-color: #225599}
-
-.newsItemWrapper a.videoLink:before{ display: table; width: 100%; height: 100%; content:'';}
-.newsItemWrapper a.videoLink 
-{
-    background-color: #FF0000;
-    display: table-cell;
-    vertical-align: middle;
-    height: 60px;            
-    width: 60px;
-}
-
-#newsList h3:before{position:relative; top:50px; left:-30px; height:0; background:transparent; border-top:15px solid #30858F; border-left:20px solid transparent;content:'';}
-
-/*NEWS TILES*/
-.news.masonry, .news{ border-left:2px solid #ddd; height: auto !important; }
-/*.content #newsList.newsList .newsItem{ overflow: hidden;}
-.content #newsList.newsList div.dateWrapper{left: -21px;}
-.content #newsList.newsList .newsItem .tile-thumb{background-color: #DDDDDD; display: block; float: left; height: 115px; margin: 0 15px 0 0; width: 115px;}
-.content #newsList.newsList .newsItem .info {margin: 0; position: relative; width: auto; z-index: 2;}
-.content .relevance-High > img{ position: absolute; width: 100%; height: 100%}*/
-
-html body div#overlay{background-image: url("../img/ajax-loader.gif"); background-position: center center; background-repeat: no-repeat; }
+.content .news-header > a.access-me:hover{background-position: -423px -92px}
