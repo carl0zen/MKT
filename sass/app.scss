@@ -1,0 +1,285 @@
+//Variable definitions
+
+$defaultColor: #777;
+//Clients
+$color1:#DD4411;
+//Future
+$color2:#003344;
+//People
+$color3:#225599;
+//Performance
+$color4:#66AA44;
+
+$mainColor: #33A0AD;
+
+
+/**
+
+
+                                
+                                
+ .oooo.   oo.ooooo.  oo.ooooo.  
+`P  )88b   888' `88b  888' `88b 
+ .oP"888   888   888  888   888 
+d8(  888   888   888  888   888 
+`Y888""8o  888bod8P'  888bod8P' 
+           888        888       
+          o888o      o888o      
+                                
+             .               oooo                     
+           .o8               `888                     
+ .oooo.o .o888oo oooo    ooo  888   .ooooo.   .oooo.o 
+d88(  "8   888    `88.  .8'   888  d88' `88b d88(  "8 
+`"Y88b.    888     `88..8'    888  888ooo888 `"Y88b.  
+o.  )88b   888 .    `888'     888  888    .o o.  )88b 
+8""888P'   "888"     .8'     o888o `Y8bod8P' 8""888P' 
+                 .o..P'                               
+                 `Y8P'  
+                 
+
+**/
+// These styles belong to the app
+
+body{
+	background: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+// No displays
+
+#LeftOnlyNav{
+	display: none;
+}
+
+@import "compass";
+
+.month{@include clearfix;height:auto !important;margin:20px 0 28px 0;}
+.cover{
+	background-postion:50%;
+	-webkit-background-postion:50%;
+	-moz-background-postion:50%;
+	-o-background-postion:50%;
+	-ms-background-postion:50%;
+	background-size:cover;
+	-ms-background-size:cover;
+	-o-background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+#overlay{display:none;width:100%;height:100%;position: fixed;background: black;background: rgba(255,255,255,.85);top:0;z-index: 1000;}
+.videoModal{display:none;width:853px;height:480px;z-index: 10001; position: fixed;top:50%;left:50%; margin-left:-426px;margin-top:-240px;}
+.videoLink{position: absolute;}
+
+
+#newsList{
+
+	.videoMask {position: absolute;left: 0;top: 0;overflow: hidden;height: 180px;}
+	.videoMask img {max-width: 100%;margin-top: -40px;}
+	/*Arrow up */
+	.relevance-High .videoMask:before{
+	  content: '';
+	  position: absolute;
+	  bottom: 0;
+	  width: 0;
+	  height: 0px;
+	  border-right: 15px solid transparent;
+	  border-left: 15px solid transparent;
+	  border-bottom: 15px solid white;
+	  z-index: 10;
+	  bottom: 0;
+	  left: 50%;
+	  margin-left: -7px;}
+	/* Arrow right */
+	.relevance-Low .videoMask:before,
+	.list .tile-thumb:before,
+	.list .relevance-High .videoMask:before {
+	  content: '';
+	  position: absolute;
+	  top: 80px;
+	  width: 0;
+	  height: 0px;
+	  border-top: 15px solid transparent;
+	  border-right: 15px solid white;
+	  border-bottom: 15px solid transparent;
+	  z-index: 10;
+	  right: 0;
+	  }
+	.list .relevance-High .videoMask:before{
+	  left: 157px;
+	}
+	.relevance-Low .videoMask {width:180px;}
+	.relevance-Low .videoMask img{max-width: 188%;margin-top: -40px;margin-left: -50%;}
+	.relevance-Low .videoMask+div{margin-left:180px;}
+	.relevance-Low .videoMask+div h4,
+	.newsItem.relevance-Low.hasImage .info h4,
+	.newsItem.relevance-Low.hasVideo .info h4{font-size:17px !important; }
+	.newsItem.relevance-Low.hasImage .info{margin-left:180px;}
+
+
+	.hasVideo{background: none !important}
+	.hasVideo:before{display:none !important}
+
+	.newsItem.hasVideo .info h4{color:#777 !important;}
+	.news{width: 103%;padding-left: 26px;}
+	h3:before{top:47px;}
+	.list .newsItem .info{margin:0;padding-right: 20px;}
+	.list .newsItem.hasVideo .info, 
+	.list .newsItem.hasImage .info,
+	.newsItem.relevance-Low.hasImage .info,
+	.newsItem.relevance-Low.hasVideo .info{margin-left:180px;}
+
+	.list .newsItem .videoMask{width:180px;}
+	.list .newsItem .videoMask img{max-width: 319px;margin-top: -30px;margin-left: -50%;}
+
+	.list .tile-thumb{width: 180px;left: 0;position: absolute;top: 0;overflow: hidden;}
+	.list .tile-thumb img{display: block;height: 180px;margin-left: -60px;width: auto;}
+
+	
+	.list-image{
+			display: none;
+	}
+	
+	.list{
+		.list-image{
+			display: block;
+			width:30%;
+		}
+
+		.newsItem{
+			width: 48% !important;
+			height: 180px;
+			overflow: hidden;	
+			background: none !important;
+			&:before{
+				display: none !important;
+			}
+			.info{
+				h4{
+					color:$defaultColor;
+				}
+			}
+		}
+	}
+	.dateWrapper{
+			display: block;
+			width: 100%;
+			height: 55px;
+			margin-left: -47px;
+			clear: both;
+	}
+	h3{
+		clear: both;
+		float: left;
+		background: #33a0ad;
+		padding: 13px 30px;
+		width: auto;
+		height: auto;
+		font-family: "RotisSansSerif55",arial;
+		color: white;
+		font-size: 20px;
+		font-weight: normal;
+	}	
+
+	.relevance-High{
+		&.category-business {background-color:$color4}
+		&.category-people 	{background-color:$color3}
+		&.category-growth 	{background-color:$color2}
+
+		h4{color:white}
+	}
+	margin-top:400px;
+	width:1160px;
+	margin:0 auto;
+	.newsItem{
+		border: 1px solid #eee;
+		padding: 20px;
+		width: 370px;
+		float: left;
+		height: 370px;
+		/* -webkit-box-sizing: border-box; */
+		margin: 10px;
+		@extend .cover;
+		&.relevance-High:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			height: 230px;
+			width: 100%;
+			@include background-image(linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)));
+			left: 0;
+			z-index: 1;
+		}
+		a.more{
+			background: url('https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/rightarrow.png') no-repeat;
+			width: 25px;
+			height: 26px;
+			text-indent: -10000px;
+			display: block;
+			float: right;
+
+		}
+		.tags a{
+			background: black;
+			color: white;
+			display: block;
+			float: left;
+			padding: 0 11px;
+			border-radius: 5px;
+			line-height: 24px;
+		}
+		&.relevance-Low{
+			height: 180px;
+			h4{
+				color: $defaultColor !important;
+
+			}
+			.hasImage.info{
+				margin-left: 174px;
+				top: 14px;
+				margin-right: 10px;
+
+				h4{
+					font-size:18px;
+				}
+			}
+		}
+		position: relative;
+		.hasImage{
+			color:white;
+		}
+		.info{
+			position: absolute;
+			bottom: 20px;
+			margin-right: 20px;
+			z-index: 2;
+			h4{
+				font-size: 22px;
+				font-family: Arial;
+				font-weight: normal;
+				line-height: 120%;
+			}
+			.date{
+				line-height: 35px;
+				color:#999;
+			}
+		}
+		.imageMask{
+			@extend .cover;
+			width: 180px;
+			height: 180px;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			position: absolute;
+		}
+	}
+}
+#LayoutArea, .content{
+	width:1168px;
+	margin:0 auto;
+}
