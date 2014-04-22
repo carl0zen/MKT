@@ -54,7 +54,9 @@ body{
 #LeftOnlyNav{
 	display: none;
 }
-
+h1,h2,h3,h4{
+	font-family: "RotisSansSerif55",arial;
+}
 @import "compass";
 
 .month{@include clearfix;height:auto !important;margin:20px 0 28px 0;}
@@ -70,30 +72,52 @@ body{
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 }
-#overlay{display:none;width:100%;height:100%;position: fixed;background: black;background: rgba(255,255,255,.85);top:0;z-index: 1000;}
-.videoModal{display:none;width:853px;height:480px;z-index: 10001; position: fixed;top:50%;left:50%; margin-left:-426px;margin-top:-240px;}
-.videoLink{position: absolute;}
-
-
+#overlay{display:none;width:100%;height:100%;position: fixed;background: black;background: rgba(255,255,255,.85);top:0;z-index: 10000;}
+.videoModal{display:none;width:853px;height:480px;z-index: 10001; position: fixed;top:50%;left:50%; margin-left:-426px;margin-top:-275px;}
+.videoModal .close{
+	background: url('https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/close.png') no-repeat;
+	float: right;
+	width: 54px;
+	height: 69px;
+	text-indent: -10000px;
+	opacity: 0.7;
+	&:hover{
+		opacity:1;
+	}
+}
+.tags a{
+			background: black;
+			color: white !important;
+			display: block;
+			float: left;
+			padding: 0 11px;
+			border-radius: 5px;
+			line-height: 24px;
+			text-decoration: none;
+		}
 #newsList{
-
+	a{
+		color:inherit;
+	}
 	.videoMask {position: absolute;left: 0;top: 0;overflow: hidden;height: 180px;}
 	.videoMask img {max-width: 100%;margin-top: -40px;}
+	.videoLink{
+		position: absolute;
+		background: url('https://sites.accenture.com/publishing/Mexico/MKTDev/PublishingImages/play.png') center center no-repeat;
+		left: 0;
+		top: 0;
+		text-indent: -10000px;
+		height:180px;
+		width:100%;
+	}
 	/*Arrow up */
-	.relevance-High .videoMask:before{
-	  content: '';
-	  position: absolute;
-	  bottom: 0;
-	  width: 0;
-	  height: 0px;
-	  border-right: 15px solid transparent;
-	  border-left: 15px solid transparent;
-	  border-bottom: 15px solid white;
-	  z-index: 10;
-	  bottom: 0;
-	  left: 50%;
-	  margin-left: -7px;}
 	/* Arrow right */
+	.list {
+		.videoLink{width: 180px;}
+		.info{
+			top:20px !important;
+		}
+	}
 	.relevance-Low .videoMask:before,
 	.list .tile-thumb:before,
 	.list .relevance-High .videoMask:before {
@@ -188,9 +212,29 @@ body{
 		&.category-business {background-color:$color4}
 		&.category-people 	{background-color:$color3}
 		&.category-growth 	{background-color:$color2}
+		.videoLink{
+			
+			height: 180px;
+			
+		}
+		.videoMask:before{
+		  content: '';
+		  position: absolute;
+		  bottom: 0;
+		  width: 0;
+		  height: 0px;
+		  border-right: 15px solid transparent;
+		  border-left: 15px solid transparent;
+		  border-bottom: 15px solid white;
+		  z-index: 10;
+		  bottom: 0;
+		  left: 50%;
+		  margin-left: -7px;
+		}
 
 		h4{color:white}
 	}
+	
 	margin-top:400px;
 	width:1160px;
 	margin:0 auto;
@@ -223,15 +267,7 @@ body{
 			float: right;
 
 		}
-		.tags a{
-			background: black;
-			color: white;
-			display: block;
-			float: left;
-			padding: 0 11px;
-			border-radius: 5px;
-			line-height: 24px;
-		}
+		
 		&.relevance-Low{
 			height: 180px;
 			h4{
@@ -244,7 +280,7 @@ body{
 				margin-right: 10px;
 
 				h4{
-					font-size:18px;
+					font-size:20px;
 				}
 			}
 		}
@@ -280,6 +316,87 @@ body{
 	}
 }
 #LayoutArea, .content{
+	
 	width:1168px;
 	margin:0 auto;
+}
+#Related{
+	
+	img{
+		width: 180px;
+
+	}
+	.imageMask{
+		position: relative;
+		width: 119px;
+		height:120px;
+		overflow: hidden;
+		float: left;
+		margin-right: 16px;
+		&:before{
+			border-bottom: 15px solid rgba(0, 0, 0, 0);
+			border-right: 15px solid #FFFFFF;
+			border-top: 15px solid rgba(0, 0, 0, 0);
+			content: "";
+			height: 0;
+			position: absolute;
+			right: 0;
+			top: 46px;
+			width: 0;
+			z-index: 10;
+		}
+	}
+	.more{
+		i{
+			margin-top: 10PX;
+			float: right;
+			margin-left: 6px;
+		}
+		span{
+			color:#666;
+			line-height: 41px;
+		}
+	}
+}
+.sidebar{
+	.widget{
+		margin:20px 0
+	}
+}
+#detailView{
+	
+
+	margin-top: 20px;
+
+	.content-field{
+		font-family: arial;
+		line-height: 130%;
+		font-size: 14px;
+		img{
+			margin:10px;
+		}
+	}
+	.headline {
+		h1{
+			margin:20px 0;
+		}
+		> div{
+			line-height: 23px;
+			margin-bottom: 20px;
+			color: #666666;
+			font-size: 12px;
+		}
+		.cat{
+			label{float:left}
+			a{
+				margin-top: 0;
+				margin-left: 10px;
+			}
+			float: right;
+		}
+	}
+	.media-wrapper{
+		margin:20px 0;
+		img{max-width: 100%;}
+	}
 }

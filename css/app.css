@@ -40,7 +40,12 @@ body {
   display: none;
 }
 
-/* line 60, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
+h1, h2, h3, h4 {
+  font-family: "RotisSansSerif55",arial;
+}
+
+/* line 62, ../sass/app.scss */
 .month {
   overflow: hidden;
   *zoom: 1;
@@ -48,7 +53,7 @@ body {
   margin: 20px 0 28px 0;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .cover, #newsList .newsItem, #newsList .newsItem .imageMask {
   background-postion: 50%;
   -webkit-background-postion: 50%;
@@ -62,7 +67,7 @@ body {
   -moz-background-size: cover;
 }
 
-/* line 73, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 #overlay {
   display: none;
   width: 100%;
@@ -71,10 +76,10 @@ body {
   background: black;
   background: rgba(255, 255, 255, 0.85);
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .videoModal {
   display: none;
   width: 853px;
@@ -84,15 +89,36 @@ body {
   top: 50%;
   left: 50%;
   margin-left: -426px;
-  margin-top: -240px;
+  margin-top: -275px;
 }
 
-/* line 75, ../sass/app.scss */
-.videoLink {
-  position: absolute;
+/* line 77, ../sass/app.scss */
+.videoModal .close {
+  background: url("https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/close.png") no-repeat;
+  float: right;
+  width: 54px;
+  height: 69px;
+  text-indent: -10000px;
+  opacity: 0.7;
+}
+/* line 84, ../sass/app.scss */
+.videoModal .close:hover {
+  opacity: 1;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
+.tags a {
+  background: black;
+  color: white !important;
+  display: block;
+  float: left;
+  padding: 0 11px;
+  border-radius: 5px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+/* line 98, ../sass/app.scss */
 #newsList {
   /*Arrow up */
   /* Arrow right */
@@ -100,7 +126,11 @@ body {
   width: 1160px;
   margin: 0 auto;
 }
-/* line 80, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
+#newsList a {
+  color: inherit;
+}
+/* line 102, ../sass/app.scss */
 #newsList .videoMask {
   position: absolute;
   left: 0;
@@ -108,27 +138,30 @@ body {
   overflow: hidden;
   height: 180px;
 }
-/* line 81, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
 #newsList .videoMask img {
   max-width: 100%;
   margin-top: -40px;
 }
-/* line 83, ../sass/app.scss */
-#newsList .relevance-High .videoMask:before {
-  content: '';
+/* line 104, ../sass/app.scss */
+#newsList .videoLink {
   position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0px;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid white;
-  z-index: 10;
-  bottom: 0;
-  left: 50%;
-  margin-left: -7px;
+  background: url("https://sites.accenture.com/publishing/Mexico/MKTDev/PublishingImages/play.png") center center no-repeat;
+  left: 0;
+  top: 0;
+  text-indent: -10000px;
+  height: 180px;
+  width: 100%;
 }
-/* line 99, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
+#newsList .list .videoLink {
+  width: 180px;
+}
+/* line 117, ../sass/app.scss */
+#newsList .list .info {
+  top: 20px !important;
+}
+/* line 123, ../sass/app.scss */
 #newsList .relevance-Low .videoMask:before,
 #newsList .list .tile-thumb:before,
 #newsList .list .relevance-High .videoMask:before {
@@ -143,78 +176,78 @@ body {
   z-index: 10;
   right: 0;
 }
-/* line 111, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 #newsList .list .relevance-High .videoMask:before {
   left: 157px;
 }
-/* line 114, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 #newsList .relevance-Low .videoMask {
   width: 180px;
 }
-/* line 115, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 #newsList .relevance-Low .videoMask img {
   max-width: 188%;
   margin-top: -40px;
   margin-left: -50%;
 }
-/* line 116, ../sass/app.scss */
+/* line 140, ../sass/app.scss */
 #newsList .relevance-Low .videoMask + div {
   margin-left: 180px;
 }
-/* line 119, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 #newsList .relevance-Low .videoMask + div h4,
 #newsList .newsItem.relevance-Low.hasImage .info h4,
 #newsList .newsItem.relevance-Low.hasVideo .info h4 {
   font-size: 17px !important;
 }
-/* line 120, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
 #newsList .newsItem.relevance-Low.hasImage .info {
   margin-left: 180px;
 }
-/* line 123, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 #newsList .hasVideo {
   background: none !important;
 }
-/* line 124, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 #newsList .hasVideo:before {
   display: none !important;
 }
-/* line 126, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 #newsList .newsItem.hasVideo .info h4 {
   color: #777 !important;
 }
-/* line 127, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 #newsList .news {
   width: 103%;
   padding-left: 26px;
 }
-/* line 128, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 #newsList h3:before {
   top: 47px;
 }
-/* line 129, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 #newsList .list .newsItem .info {
   margin: 0;
   padding-right: 20px;
 }
-/* line 133, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 #newsList .list .newsItem.hasVideo .info,
 #newsList .list .newsItem.hasImage .info,
 #newsList .newsItem.relevance-Low.hasImage .info,
 #newsList .newsItem.relevance-Low.hasVideo .info {
   margin-left: 180px;
 }
-/* line 135, ../sass/app.scss */
+/* line 159, ../sass/app.scss */
 #newsList .list .newsItem .videoMask {
   width: 180px;
 }
-/* line 136, ../sass/app.scss */
+/* line 160, ../sass/app.scss */
 #newsList .list .newsItem .videoMask img {
   max-width: 319px;
   margin-top: -30px;
   margin-left: -50%;
 }
-/* line 138, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 #newsList .list .tile-thumb {
   width: 180px;
   left: 0;
@@ -222,38 +255,38 @@ body {
   top: 0;
   overflow: hidden;
 }
-/* line 139, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 #newsList .list .tile-thumb img {
   display: block;
   height: 180px;
   margin-left: -60px;
   width: auto;
 }
-/* line 142, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 #newsList .list-image {
   display: none;
 }
-/* line 147, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 #newsList .list .list-image {
   display: block;
   width: 30%;
 }
-/* line 152, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 #newsList .list .newsItem {
   width: 48% !important;
   height: 180px;
   overflow: hidden;
   background: none !important;
 }
-/* line 157, ../sass/app.scss */
+/* line 181, ../sass/app.scss */
 #newsList .list .newsItem:before {
   display: none !important;
 }
-/* line 161, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
 #newsList .list .newsItem .info h4 {
   color: #777777;
 }
-/* line 167, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 #newsList .dateWrapper {
   display: block;
   width: 100%;
@@ -261,7 +294,7 @@ body {
   margin-left: -47px;
   clear: both;
 }
-/* line 174, ../sass/app.scss */
+/* line 198, ../sass/app.scss */
 #newsList h3 {
   clear: both;
   float: left;
@@ -274,23 +307,42 @@ body {
   font-size: 20px;
   font-weight: normal;
 }
-/* line 188, ../sass/app.scss */
+/* line 212, ../sass/app.scss */
 #newsList .relevance-High.category-business {
   background-color: #66aa44;
 }
-/* line 189, ../sass/app.scss */
+/* line 213, ../sass/app.scss */
 #newsList .relevance-High.category-people {
   background-color: #225599;
 }
-/* line 190, ../sass/app.scss */
+/* line 214, ../sass/app.scss */
 #newsList .relevance-High.category-growth {
   background-color: #003344;
 }
-/* line 192, ../sass/app.scss */
+/* line 215, ../sass/app.scss */
+#newsList .relevance-High .videoLink {
+  height: 180px;
+}
+/* line 220, ../sass/app.scss */
+#newsList .relevance-High .videoMask:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0px;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid white;
+  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  margin-left: -7px;
+}
+/* line 235, ../sass/app.scss */
 #newsList .relevance-High h4 {
   color: white;
 }
-/* line 197, ../sass/app.scss */
+/* line 241, ../sass/app.scss */
 #newsList .newsItem {
   border: 1px solid #eee;
   padding: 20px;
@@ -301,7 +353,7 @@ body {
   margin: 10px;
   position: relative;
 }
-/* line 206, ../sass/app.scss */
+/* line 250, ../sass/app.scss */
 #newsList .newsItem.relevance-High:before {
   content: '';
   display: block;
@@ -317,7 +369,7 @@ body {
   left: 0;
   z-index: 1;
 }
-/* line 217, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 #newsList .newsItem a.more {
   background: url("https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/rightarrow.png") no-repeat;
   width: 25px;
@@ -326,58 +378,48 @@ body {
   display: block;
   float: right;
 }
-/* line 226, ../sass/app.scss */
-#newsList .newsItem .tags a {
-  background: black;
-  color: white;
-  display: block;
-  float: left;
-  padding: 0 11px;
-  border-radius: 5px;
-  line-height: 24px;
-}
-/* line 235, ../sass/app.scss */
+/* line 271, ../sass/app.scss */
 #newsList .newsItem.relevance-Low {
   height: 180px;
 }
-/* line 237, ../sass/app.scss */
+/* line 273, ../sass/app.scss */
 #newsList .newsItem.relevance-Low h4 {
   color: #777777 !important;
 }
-/* line 241, ../sass/app.scss */
+/* line 277, ../sass/app.scss */
 #newsList .newsItem.relevance-Low .hasImage.info {
   margin-left: 174px;
   top: 14px;
   margin-right: 10px;
 }
-/* line 246, ../sass/app.scss */
+/* line 282, ../sass/app.scss */
 #newsList .newsItem.relevance-Low .hasImage.info h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
-/* line 252, ../sass/app.scss */
+/* line 288, ../sass/app.scss */
 #newsList .newsItem .hasImage {
   color: white;
 }
-/* line 255, ../sass/app.scss */
+/* line 291, ../sass/app.scss */
 #newsList .newsItem .info {
   position: absolute;
   bottom: 20px;
   margin-right: 20px;
   z-index: 2;
 }
-/* line 260, ../sass/app.scss */
+/* line 296, ../sass/app.scss */
 #newsList .newsItem .info h4 {
   font-size: 22px;
   font-family: Arial;
   font-weight: normal;
   line-height: 120%;
 }
-/* line 266, ../sass/app.scss */
+/* line 302, ../sass/app.scss */
 #newsList .newsItem .info .date {
   line-height: 35px;
   color: #999;
 }
-/* line 271, ../sass/app.scss */
+/* line 307, ../sass/app.scss */
 #newsList .newsItem .imageMask {
   width: 180px;
   height: 180px;
@@ -387,8 +429,98 @@ body {
   position: absolute;
 }
 
-/* line 282, ../sass/app.scss */
+/* line 318, ../sass/app.scss */
 #LayoutArea, .content {
   width: 1168px;
   margin: 0 auto;
+}
+
+/* line 325, ../sass/app.scss */
+#Related img {
+  width: 180px;
+}
+/* line 329, ../sass/app.scss */
+#Related .imageMask {
+  position: relative;
+  width: 119px;
+  height: 120px;
+  overflow: hidden;
+  float: left;
+  margin-right: 16px;
+}
+/* line 336, ../sass/app.scss */
+#Related .imageMask:before {
+  border-bottom: 15px solid rgba(0, 0, 0, 0);
+  border-right: 15px solid #FFFFFF;
+  border-top: 15px solid rgba(0, 0, 0, 0);
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 46px;
+  width: 0;
+  z-index: 10;
+}
+/* line 350, ../sass/app.scss */
+#Related .more i {
+  margin-top: 10PX;
+  float: right;
+  margin-left: 6px;
+}
+/* line 355, ../sass/app.scss */
+#Related .more span {
+  color: #666;
+  line-height: 41px;
+}
+
+/* line 362, ../sass/app.scss */
+.sidebar .widget {
+  margin: 20px 0;
+}
+
+/* line 366, ../sass/app.scss */
+#detailView {
+  margin-top: 20px;
+}
+/* line 371, ../sass/app.scss */
+#detailView .content-field {
+  font-family: arial;
+  line-height: 130%;
+  font-size: 14px;
+}
+/* line 375, ../sass/app.scss */
+#detailView .content-field img {
+  margin: 10px;
+}
+/* line 380, ../sass/app.scss */
+#detailView .headline h1 {
+  margin: 20px 0;
+}
+/* line 383, ../sass/app.scss */
+#detailView .headline > div {
+  line-height: 23px;
+  margin-bottom: 20px;
+  color: #666666;
+  font-size: 12px;
+}
+/* line 389, ../sass/app.scss */
+#detailView .headline .cat {
+  float: right;
+}
+/* line 390, ../sass/app.scss */
+#detailView .headline .cat label {
+  float: left;
+}
+/* line 391, ../sass/app.scss */
+#detailView .headline .cat a {
+  margin-top: 0;
+  margin-left: 10px;
+}
+/* line 398, ../sass/app.scss */
+#detailView .media-wrapper {
+  margin: 20px 0;
+}
+/* line 400, ../sass/app.scss */
+#detailView .media-wrapper img {
+  max-width: 100%;
 }

@@ -119,7 +119,8 @@ oo     .d8P  888   888  888   888  888    .o  888
       this.render();
     },
     render:function(){
-
+      console.log(this.collection);
+      window.collection = this.collection;
       this.collection.forEach(function(collection){
 
         var slideView = new SlideView({model:collection});
@@ -282,7 +283,7 @@ o8o        `8  `Y8bod8P'   "888" o888o `Y8bod8P' o888o `Y888""8o 8""888P'
       return false;
     },
     viewFilter: function(e){
-      e.preventDefault();
+
       $('#viewFilter a').removeClass('selected');
       $(e.currentTarget).addClass("selected");
       var filter = $(e.currentTarget).attr('data-filter');
@@ -297,7 +298,7 @@ o8o        `8  `Y8bod8P'   "888" o888o `Y8bod8P' o888o `Y888""8o 8""888P'
 
     },
     filter: function(e){
-      e.preventDefault();
+
       $('#filters a').removeClass('active-tab');
       $(e.currentTarget).addClass("active-tab");
       this.$el.find('.news').html('');
@@ -333,7 +334,7 @@ Backbone.ViewOptions.add( Backbone.View.prototype );
 
 var DetailView = Backbone.View.extend({
   options: ["id"],
-  el:'.content',
+  el:$('#app'),
   initialize: function(options){
     this.setOptions(options);
     this.render();
@@ -351,26 +352,97 @@ var DetailView = Backbone.View.extend({
 });
 
 
+/** LF Banner **/
+var LFBannerItem = Backbone.SP.Item.extend({});
+  
+  var LFBannerItems = Backbone.SP.List.extend({
+    model:LFBannerItem, 
+    site: siteRoot, 
+    list: 'LFBanner', 
+    view: ''
+  });
+ 
+  
+  var LFBannerItemView = Backbone.View.extend({
+    tagName: 'div',
+    initialize: function(){
+      this.render();
+    },
+    render: function(){
+      var linkUrl = this.model.get('linkUrl');
+      var imageUrl = this.model.get('imageUrl');
+
+      var template =  _.template($('#LFBannerTemplate').html(),{
+        title: this.model.get('Title'),
+        linkUrl: linkUrl.split(',')[0],
+        imageUrl: imageUrl.split(',')[0]
+      });
+      this.$el.html(template);
+      return this;
+
+    }
+  });
 
 
+  var LFBannerItemsView = Backbone.View.extend({
+    //tagName:'ul',
+    initialize: function(){
+      this.render();
+    },
+    render:function(){
 
+      this.collection.forEach(function(model){
+
+        var lfBannerView = new LFBannerItemView({model:model});
+        $('#LFBanner').append(lfBannerView.el);
+
+      }, this);
+    }
+
+  });
+
+//Hide Overlay
+$('#overlay').click(function(e){
+  $('.videoModal, #overlay').fadeOut(300);
+});
+ 
+// Render Menu
+topNavItems = new TopNavItems();
+
+//Fetching the content from the Sharepoint List
+topNavItems.fetch({
+  success: function(e){
+    var topNavItemsView = new TopNavItemsView({collection:topNavItems});
+  }
+});
 
 
 var AppRouter = Backbone.Router.extend({
         routes: {
-            "":'index',
-            "noticia/:id": "renderNew" // matches http://example.com/#anything-here
+            "":'renderIndexView',
+            "noticia/:id": "renderNewView" // matches http://example.com/#anything-here
         },
-        index: function(e){
-          $('#overlay').click(function(e){
-              $('.videoModal, #overlay').fadeOut(300);
+       
+        renderIndexView:function(){
+          var IndexView = Backbone.View.extend({
+            el:$('#app'), 
+            initialize: function(){
+              this.render();
+            },
+            render: function(){
+              var template = _.template($('#indexViewTemplate').html());
+              this.$el.html(template);
+            }
           });
-          this.renderMenu();
-          this.renderSlider();
-          this.renderNews();
-         
+          var indexView = new IndexView();
+          _this = this;
+          _(function() {
+              _this.renderSlider();
+              _this.renderNews();
+          }).defer();
+
         },
-        renderNew: function(id){
+        renderNewView: function(id){
 
           
           if(typeof news === 'undefined'){
@@ -387,6 +459,8 @@ var AppRouter = Backbone.Router.extend({
             var detailView = new DetailView({'id':id});
             
           }
+
+          //this.renderLFBanner();
            //Add breadcrumb
           var breadcrumb = $('.p2-breadcrumbCurrent');
 
@@ -395,17 +469,6 @@ var AppRouter = Backbone.Router.extend({
           //Check if news object exist
          
         },
-        renderMenu: function(){
-            // Creating an instance of slides
-          topNavItems = new TopNavItems();
-
-          //Fetching the content from the Sharepoint List
-          topNavItems.fetch({
-            success: function(e){
-              var topNavItemsView = new TopNavItemsView({collection:topNavItems});
-            }
-          });
-        },
         renderSlider:function(){
           // Creating an instance of slides
           slidesInstance = new Slides();
@@ -413,6 +476,7 @@ var AppRouter = Backbone.Router.extend({
           //Fetching the content from the Sharepoint List
           slidesInstance.fetch({
             success: function(e){
+
               var slidesView = new SlidesView({collection:slidesInstance});
             }
           });
@@ -433,6 +497,14 @@ var AppRouter = Backbone.Router.extend({
               var newsListView = new NewsListView({collection:filteredNews});
             }
           });
+        },
+        renderLFBanner: function(){
+             var lfBannerItems = new LFBannerItems();
+            lfBannerItems.fetch({
+                success: function(){
+                  var lfBannerView = new LFBannerItemsView({collection:lfBannerItems});
+                }
+            });
         }
 
     });
