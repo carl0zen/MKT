@@ -363,8 +363,8 @@ h1,h2,h3,h4{
 		margin:20px 0
 	}
 }
+.news{margin-top:20px;}
 #detailView{
-	
 
 	margin-top: 20px;
 
@@ -395,8 +395,148 @@ h1,h2,h3,h4{
 			float: right;
 		}
 	}
-	.media-wrapper{
-		margin:20px 0;
-		img{max-width: 100%;}
+	.controls{
+		position: absolute;
+
+		width: 800px;
+		margin-top: 70px;
+		margin-left:-55px;
+	}
+	#prevGal, #nextGal{
+			background: url("../img/mkt-sprite.png") no-repeat scroll -122px -241px transparent;
+
+			display: block;
+			float: left;
+			height: 67px;
+			overflow: hidden;
+			text-indent: -1000px;
+			width: 42px;
+		}
+		#nextGal{
+			background-position: -225px -241px;
+			float:right;
+		}
+	#gallery{
+		margin: 20px 0;
+
+		a{
+			width:170px; 
+			height:170px;
+			overflow: hidden;
+			border:2px solid gray;
+			position: relative;
+			float: left;
+			display: block;
+			margin-right:10px;
+			
+			img{
+				height:100%;
+			}
+		}
+	}
+}
+.videoModal{
+	.imagecontainer{
+		height:100%;
+		text-align: center;
+	}
+	img{
+		height: 100%;
+		max-width: 100%;
+	}
+}
+#strategyView .content{
+	float: left;
+}
+.p2-bannerTitleArea{
+	width:200px;
+}
+h1,h2,h3,h4{
+	line-height: 130%;
+}
+.media-wrapper{
+	width:50%;
+	float:left;
+	margin:0px 20px 20px 0;
+	background-image: url("../img/ajax-loader.gif");
+	background-position: center center;
+	background-repeat: no-repeat;
+	img{
+		width:100%
+	}
+}
+#storySlider{
+	width:94%;
+	margin: 20px 30px;
+	#prevStory, #nextStory {
+		position: absolute;
+		
+		top: 26px;
+		text-indent: -10000px;
+		width: 12px;
+		height: 19px;
+		background-repeat: no-repeat;
+	}
+	#nextStory{
+		right: -26px;
+		background-image: url(https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/right.png);
+		top: 18px;
+	}
+	#prevStory{
+		left: -26px;
+		background-image: url(https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/left.png);
+
+	}
+
+	.slide, .slider{
+		width:100% !important;
+	}
+
+	display: block;
+	float: left;
+	position: relative;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	img{
+
+		height: 100%;
+	}
+	.mask{
+		display: block;
+		width: 71px;
+		height: 71px;
+		float: left;
+		margin-right: 10px;
+		overflow: hidden;
+	}
+	li{
+		position: absolute;
+		width:40%;
+		top:0;
+		line-height: 12px;
+		a{
+			margin: 10px 0;
+			display: block;
+			color: #008799;
+			font-size: 13px;
+			line-height: 18px;
+		}
+	}
+	li:first-child{
+		img{
+			float:left;
+			margin-right:13px;
+		}
+		text-align: left;
+		left:0
+	}
+	li:last-child{
+		img{
+			float:right;
+			margin-left:13px;
+		}
+		text-align: right;
+		right:0
 	}
 }

@@ -57,7 +57,7 @@
 		<div class="info {{if(imageUrl){ }} hasImage {{ } }}">
 			<h4><a href="detail.aspx#{{=id}}">{{=title}}</a></h4>
 			<p class="date">{{=date}}</p>
-			<div class="tags"><a href="#" class="link-{{=tag}}">{{=tag}}</a></div>
+			<div class="tags"><a href="detail.aspx#category/{{=tag}}" class="link-{{=tag}}">{{=tag}}</a></div>
 			<a href="detail.aspx#{{=id}}" class="more">Conoce m&aacutes</a>
 		</div>
 	</div>
@@ -106,18 +106,18 @@
 	<div id="newsList" class="newsList">
 		<div id="filters">
 			<div id="categoryFilter">
-				<a data-filter="all" 	class="active-tab"	href="#"><i></i>Access me</a>
-				<a data-filter="business" 	href="#"><i></i>Our Business</a>
-				<a data-filter="growth" 	href="#"><i></i>Our growth</a>
-				<a data-filter="people" 	href="#"><i></i>Our people</a>
+				<a data-filter="all" 	class="active-tab"	href="#"><span></span>Access me</a>
+				<a data-filter="business" 	href="#"><span></span>Our Business</a>
+				<a data-filter="growth" 	href="#"><span></span>Our growth</a>
+				<a data-filter="people" 	href="#"><span></span>Our people</a>
 			</div>
 		</div>
 		<div class="news-header">
 			<h2>Noticias Recientes</h2>
 			<a href="#" class="access-me"></a>
 			<div id="viewFilter">
-				<a data-filter="list" 		href="#" class="listView"><i></i>View List</a>
-				<a data-filter="grid" 		href="#" class="gridView selected"><i></i>View Grid</a>
+				<a data-filter="list" 		href="#" class="listView"><span></span>View List</a>
+				<a data-filter="grid" 		href="#" class="gridView selected"><span></span>View Grid</a>
 			</div>
 		</div>
 		<div class="news"></div>

@@ -567,6 +567,11 @@ h1, h2, h3, h4 {
 }
 
 /* line 366, ../sass/app.scss */
+.news {
+  margin-top: 20px;
+}
+
+/* line 367, ../sass/app.scss */
 #detailView {
   margin-top: 20px;
 }
@@ -605,10 +610,167 @@ h1, h2, h3, h4 {
   margin-left: 10px;
 }
 /* line 398, ../sass/app.scss */
-#detailView .media-wrapper {
+#detailView .controls {
+  position: absolute;
+  width: 800px;
+  margin-top: 70px;
+  margin-left: -55px;
+}
+/* line 405, ../sass/app.scss */
+#detailView #prevGal, #detailView #nextGal {
+  background: url("../img/mkt-sprite.png") no-repeat scroll -122px -241px transparent;
+  display: block;
+  float: left;
+  height: 67px;
+  overflow: hidden;
+  text-indent: -1000px;
+  width: 42px;
+}
+/* line 415, ../sass/app.scss */
+#detailView #nextGal {
+  background-position: -225px -241px;
+  float: right;
+}
+/* line 419, ../sass/app.scss */
+#detailView #gallery {
   margin: 20px 0;
 }
-/* line 400, ../sass/app.scss */
-#detailView .media-wrapper img {
+/* line 422, ../sass/app.scss */
+#detailView #gallery a {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border: 2px solid gray;
+  position: relative;
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+/* line 432, ../sass/app.scss */
+#detailView #gallery a img {
+  height: 100%;
+}
+
+/* line 439, ../sass/app.scss */
+.videoModal .imagecontainer {
+  height: 100%;
+  text-align: center;
+}
+/* line 443, ../sass/app.scss */
+.videoModal img {
+  height: 100%;
   max-width: 100%;
+}
+
+/* line 448, ../sass/app.scss */
+#strategyView .content {
+  float: left;
+}
+
+/* line 451, ../sass/app.scss */
+.p2-bannerTitleArea {
+  width: 200px;
+}
+
+/* line 454, ../sass/app.scss */
+h1, h2, h3, h4 {
+  line-height: 130%;
+}
+
+/* line 457, ../sass/app.scss */
+.media-wrapper {
+  width: 50%;
+  float: left;
+  margin: 0px 20px 20px 0;
+  background-image: url("../img/ajax-loader.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 464, ../sass/app.scss */
+.media-wrapper img {
+  width: 100%;
+}
+
+/* line 468, ../sass/app.scss */
+#storySlider {
+  width: 94%;
+  margin: 20px 30px;
+  display: block;
+  float: left;
+  position: relative;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+/* line 471, ../sass/app.scss */
+#storySlider #prevStory, #storySlider #nextStory {
+  position: absolute;
+  top: 26px;
+  text-indent: -10000px;
+  width: 12px;
+  height: 19px;
+  background-repeat: no-repeat;
+}
+/* line 480, ../sass/app.scss */
+#storySlider #nextStory {
+  right: -26px;
+  background-image: url(https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/right.png);
+  top: 18px;
+}
+/* line 485, ../sass/app.scss */
+#storySlider #prevStory {
+  left: -26px;
+  background-image: url(https://sites.accenture.com/publishing/Mexico/MKTDev/assets/img/left.png);
+}
+/* line 491, ../sass/app.scss */
+#storySlider .slide, #storySlider .slider {
+  width: 100% !important;
+}
+/* line 501, ../sass/app.scss */
+#storySlider img {
+  height: 100%;
+}
+/* line 505, ../sass/app.scss */
+#storySlider .mask {
+  display: block;
+  width: 71px;
+  height: 71px;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+}
+/* line 513, ../sass/app.scss */
+#storySlider li {
+  position: absolute;
+  width: 40%;
+  top: 0;
+  line-height: 12px;
+}
+/* line 518, ../sass/app.scss */
+#storySlider li a {
+  margin: 10px 0;
+  display: block;
+  color: #008799;
+  font-size: 13px;
+  line-height: 18px;
+}
+/* line 526, ../sass/app.scss */
+#storySlider li:first-child {
+  text-align: left;
+  left: 0;
+}
+/* line 527, ../sass/app.scss */
+#storySlider li:first-child img {
+  float: left;
+  margin-right: 13px;
+}
+/* line 534, ../sass/app.scss */
+#storySlider li:last-child {
+  text-align: right;
+  right: 0;
+}
+/* line 535, ../sass/app.scss */
+#storySlider li:last-child img {
+  float: right;
+  margin-left: 13px;
 }

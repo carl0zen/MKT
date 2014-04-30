@@ -1,4 +1,4 @@
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
 <link rel="stylesheet" href="https://sites.accenture.com/publishing/Mexico/MKTDev/assets/css/main.css">
 <link rel="stylesheet" href="https://sites.accenture.com/publishing/Mexico/MKTDev/assets/css/app.css">
 
@@ -12,6 +12,9 @@
 	<a href="{{=linkUrl}}">{{=title}}</a>
 </script>
 
+<script id="LFBannerTemplate" type="text/template">
+	<a href="{{=linkUrl}}"><img src="{{=imageUrl}}"/></a>
+</script>
 
 <script id="slideTemplate" type="text/template">
 	<div class="slide">
@@ -61,6 +64,39 @@
 	</div>
 </script>
 
+<script id="indexViewTemplate" type="text/template">
+	<div class="content" id="indexView">
+		<div class="sliderContainer">
+			<div id="slides"></div>
+			<div class="controls">
+				<a href="#" id="prev">Prev</a>
+				<a href="#" id="next">Next</a>
+			</div>
+		</div>
+		<div id="newsList" class="newsList">
+			<div id="filters">
+				<div id="categoryFilter">
+					<a data-filter="all" 	class="active-tab"	href="#"><i></i>Access me</a>
+					<a data-filter="business" 	href="#"><i></i>Our Business</a>
+					<a data-filter="growth" 	href="#"><i></i>Our growth</a>
+					<a data-filter="people" 	href="#"><i></i>Our people</a>
+				</div>
+			</div>
+			<div class="news-header">
+				<h2>Noticias Recientes</h2>
+				<a href="#" class="access-me"></a>
+				<div id="viewFilter">
+					<a data-filter="list" 		href="#" class="listView"><i></i>View List</a>
+					<a data-filter="grid" 		href="#" class="gridView selected"><i></i>View Grid</a>
+				</div>
+			</div>
+			<div class="news"></div>
+
+		</div>
+
+	</div>
+</script>
+
 <script   src="https://sites.accenture.com/publishing/Mexico/MKTDev/assets/js/vendor/json2.js"></script>
 <script   src="https://sites.accenture.com/publishing/Mexico/MKTDev/assets/js/vendor/jquery2.js"></script>
 
@@ -85,32 +121,6 @@
 <div class="topNavigation"><ul id="topNav"></ul></div>
 
 
-<div class="content" id="indexView">
-	<div class="sliderContainer">
-		<div id="slides"></div>
-		<div class="controls">
-			<a href="#" id="prev">Prev</a>
-			<a href="#" id="next">Next</a>
-		</div>
-	</div>
-	<div id="newsList" class="newsList">
-		<div id="filters">
-			<div id="categoryFilter">
-				<a data-filter="all" 	class="active-tab"	href="#"><i></i>Access me</a>
-				<a data-filter="business" 	href="#"><i></i>Our Business</a>
-				<a data-filter="growth" 	href="#"><i></i>Our growth</a>
-				<a data-filter="people" 	href="#"><i></i>Our people</a>
-			</div>
-		</div>
-		<div class="news-header">
-			<h2>Noticias Recientes</h2>
-			<a href="#" class="access-me"></a>
-			<div id="viewFilter">
-				<a data-filter="list" 		href="#" class="listView"><i></i>View List</a>
-				<a data-filter="grid" 		href="#" class="gridView selected"><i></i>View Grid</a>
-			</div>
-		</div>
-		<div class="news"></div>
+<div id="app"></div>
 
-	</div>
-</div>
+
