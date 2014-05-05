@@ -21,14 +21,6 @@
 <script id="detailViewTemplate" type="text/template">
   <div class="news-internal-content {{=category}}">
     
-    <div class="widget banner-header">      
-      <div class="category {{=category}}">
-        <span></span>
-        Our {{=category}}
-      </div>
-      <div class="trama"></div>
-      <img src="{{=categoryImageUrl}}">
-    </div>
      <div class="headline">
       <h1>
         {{=title}}
@@ -41,7 +33,7 @@
             </div>
     </div>
     {{if(videoId){ }}
-      <div class="media-wrapper"><iframe width="100%" height="415" src="//www.youtube.com/embed/{{=videoId}}" frameborder="0" allowfullscreen></iframe></div>
+      <div class="media-wrapper"><iframe width="100%" height="250" src="//www.youtube.com/embed/{{=videoId}}" frameborder="0" allowfullscreen></iframe></div>
 
     {{ } else{ }}
         {{if(imageUrl){ }}
@@ -73,10 +65,10 @@
       <div class="imageMask" style="background-image:url({{=imageUrl}})"></div>
     {{ } }}
     <div class="info {{if(imageUrl){ }} hasImage {{ } }}">
-      <h4><a href="strategy.aspx#{{=id}}">{{=title}}</a></h4>
+      <h4><a href="#{{=id}}">{{=title}}</a></h4>
       <p class="date">{{=date}}</p>
     
-      <a href="strategy.aspx#{{=id}}" class="more">Conoce m&aacutes</a>
+      <a href="#{{=id}}" class="more">Conoce m&aacutes</a>
     </div>
   </div>
 </script>
@@ -97,7 +89,7 @@
     <h4><a href="#{{=id}}">{{=title}}</a></h4>
     <p class="date">{{=date}}</p>
     <div class="tags"><a href="detail.aspx#category/{{=tag}}" class="link-{{=tag}}">{{=tag}}</a></div>
-    <a href="detail.aspx#{{=id}}" class="more"><i></i><span>Conoce m&aacute;s</span></a>
+    <a href="detail.aspx#{{=id}}" class="more"><span></span>Conoce m&aacute;s</a>
   </div>
 </script>
 <script id="expertItemTemplate" type="text/template">
@@ -120,12 +112,11 @@
 <script   src="../assets/js/vendor/moment.js"></script>
 <script   src="../assets/js/vendor/masonry.js"></script>
 <script   src="../assets/js/_config.js"></script> 
-<script   src="../assets/modules/TopNavigation.js"></script>  
-<script   src="../assets/modules/MexicoStrategy.js"></script>  
+<script   src="../assets/modules/TopNavigation.js"></script>   
 
 <script   src="../assets/modules/Banners.js"></script>
 <script   src="../assets/js/common.js"></script>
-<script   src="../assets/js/strategy.js"></script> 
+<script   src="../assets/js/awards.js"></script> 
 
 
 <div id="overlay"></div>
@@ -133,11 +124,17 @@
 
 <div class="topNavigation"><ul id="topNav"></ul></div>
 
-<div class="layout-news-detail">
+<div class="layout-news-detail" id="awards">
+  <div class="banner">
+    <a href="#">
+    <img src="https://sites.accenture.com/publishing/Mexico/MKTDev/PublishingImages/reconocimientos.jpg" alt="Reconocimientos"/>
+    </a>
+  </div>
   <div class="content" id="detailView">
     
   </div>
-  <div id="newsList">
+  <div id="newsList" class="awards">
+
     <div class="news list" ></div>
   </div>
   <div class="sidebar">

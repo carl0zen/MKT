@@ -5,6 +5,7 @@ $defaultColor: #777;
 $color1:#DD4411;
 //Future
 $color2:#003344;
+
 //People
 $color3:#225599;
 //Performance
@@ -539,4 +540,33 @@ h1,h2,h3,h4{
 		text-align: right;
 		right:0
 	}
+	
 }
+.banner{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 12px;
+}
+#topNav {
+	li{line-height: 185%;}
+	.selected{
+		border-bottom:5px solid $mainColor;
+	}
+}
+#awards .news-internal-content{
+	margin-top: 276px;
+	padding-left: 10px;
+}
+#newsList.awards{
+	width: 800px;
+	float: left;
+	padding: 0;
+	.news{border:none;margin-top:270px;}
+	.list .newsItem {
+		width: 91% !important;
+	}
+	.month{
+		margin:0
+	}
+}
+
